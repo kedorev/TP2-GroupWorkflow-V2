@@ -1,0 +1,14 @@
+{
+  "name": "movie_searcher",
+  "version": "0.0.2",
+  "description": "Movie data base ",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Movie"
+  ],
+  "author": "Angie, Dimitri, Maxime, Yanigg",
+  "license": "ISC"
+}
