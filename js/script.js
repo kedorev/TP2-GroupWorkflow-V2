@@ -122,10 +122,10 @@ function hideLoader(reponse) {
     $('#keyword').val('');
     if(reponse == 'False'){
         $('.film-cnt').hide();
-        $('.error').show();
+        $('#error').show();
     }else{
         $('.film-cnt').show();
-        $('.error').hide();
+        $('#error').hide();
     }
     // faire si l'un ou l'autre
 
