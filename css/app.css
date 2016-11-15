@@ -1,6 +1,12 @@
 .left {
   float: left; }
 
+.hide {
+  display: none; }
+
+body {
+  margin: 0; }
+
 main {
   display: flex;
   flex-direction: column;
@@ -30,7 +36,8 @@ nav {
           color: #737373; }
 
 #big-input {
-  background: #ffffff; }
+  background: #ffffff;
+  justify-content: center; }
   #big-input input {
     padding: 10px 0;
     border: 0px;
@@ -39,10 +46,8 @@ nav {
   #big-input:focus {
     padding: 20px 0; }
   #big-input i {
-    margin-right: 1em; }
-
-.hide {
-  display: none; }
+    margin-right: 1em;
+    width: 2em; }
 
 article {
   background: linear-gradient(to bottom right, #212b2d, #2f383d);
@@ -61,10 +66,13 @@ footer {
   text-align: center;
   background: #222222;
   color: #f3f3f3;
-  padding: 10px 0; }
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 #backhide {
-  height: 80vh;
+  height: 90vh;
   overflow: hidden; }
 
 .loader {
