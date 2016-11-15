@@ -125,6 +125,7 @@ article h2 {
   align-items: center;
   flex-direction: column;
   width: 80%;
+  margin: auto;
 }
 .main_background {
   background: linear-gradient(to bottom right, #212b2d, #2f383d);
