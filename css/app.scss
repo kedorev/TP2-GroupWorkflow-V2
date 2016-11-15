@@ -3,6 +3,8 @@ $black: #222222;
 
 main{
   display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 #main{
   display: none;
@@ -10,6 +12,8 @@ main{
 nav {
   background: $black;
   padding: 10px 0;
+  width: 100%;
+  float: left;
   h1 {
     color: #f5f5f5;
   }
@@ -45,59 +49,44 @@ nav {
     margin-right: 1em;
   }
 }
-
-  .btn-success {
-    float: right;
-    border-radius: 0px;
-  }
-
-  .center_horizontal {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-  .center_vertical {
-    margin-bottom: auto;
-    margin-top: auto;
-  }
-  .hide {
-    display: none;
-  }
-  article {
-    background: linear-gradient(to bottom right, #212b2d, #2f383d);
-    color: #ffffff;
-    height: 85vh;
-  }
-  article h2{
-    margin: 0;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-  .year{
-    display: block;
-  }
-  footer{
-    text-align: center;
-    background: #222222;
-    color: #f3f3f3;
-    padding: 10px 0;
-  }
-  #backhide{
-    height: 80vh;
-    overflow: hidden;
-  }
-  .loader{
-    display: none;
-    text-align: center;
-    margin-top: 8%;
-  }
-  .main{
-    display: none;
-  }
-  .error{
-    color: red;
-    text-align: center;
-  }
-  .error>div>h2{
-    padding-top: 8%;
-  }
+.hide {
+  display: none;
+}
+article {
+  background: linear-gradient(to bottom right, #212b2d, #2f383d);
+  color: #ffffff;
+  height: 85vh;
+}
+article h2{
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.year{
+  display: block;
+}
+footer{
+  text-align: center;
+  background: #222222;
+  color: #f3f3f3;
+  padding: 10px 0;
+}
+#backhide{
+  height: 80vh;
+  overflow: hidden;
+}
+.loader{
+  display: none;
+  text-align: center;
+  margin-top: 8%;
+}
+.main{
+  display: none;
+}
+.error{
+  color: red;
+  text-align: center;
+}
+.error>div>h2{
+  padding-top: 8%;
+}
