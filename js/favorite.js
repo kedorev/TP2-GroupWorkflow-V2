@@ -18,7 +18,8 @@ jQuery(document).ready(function(){
             var blockYear = '<dd class="favYear'+ getYear() +'">'+ getYear()+'</dd>';
             $('.favListe').append(blockTitre);
             $('.favListe').append(blockYear);
-            sessionStorage.setItem(getTitre(),[blockTitre,blockYear]);
+            var array = blockTitre + blockYear;
+            localStorage.setItem(getTitre(),array);
         }
 
     });
