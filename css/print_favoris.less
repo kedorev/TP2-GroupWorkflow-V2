@@ -1,16 +1,20 @@
 // out: print_favoris.css, sourcemap: true, compress: true
 @media print {
-    main, footer{
+    .no_print{
       display: none;
     }
-   .favoris{
-     width: 100%;
-     button{
-       display: none;
-     }
-   }
-   footer{
-     position: fixed;
-     bottom:0;
-   }
+    nav{
+      height: 0px;
+    }
+    #titre_list_films{
+      display:block;
+    }
+    .favorite-list{
+      margin-top: 10px;
+      font-size: 20px;
+    }
+    .favListe{
+      width: auto;
+      padding-bottom: 5px;
+    }
 }

@@ -1,138 +1,121 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-		    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-		    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
-        <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
-        <title>Movie API project</title>
-    </head>
-    <body>
-		<main>
-			<header class="flex_container_row">
-				<nav class="navbar navbar-inverse">
-					<div class="container">
-						<img src="imgs/video-player.png" alt="Logo" class="left">
-						<h1 title="Movie" class="left">movie searcher</h1>
-					</div>
-				</nav>
-			</header>
-			<div id="big-input">
-				<form action="submit">
-					<div class="flex_container_search">
-						<i class="fa fa-search" aria-hidden="true"></i>
-						<input id="keyword" type="text" placeholder="Rechercher un film ">
-						<button id ="search" type="submit" class="btn btn-success">Search</button>
-					</div>
-				</form>
-			</div>
-			<div id="main" class="main_background flex_container_center">
-				<div class="flex_container_main">
-					<div class="loader">
-						<img src="imgs/icon-loader.gif" alt="">
-					</div>
-					<section id="error">
-						<div class="flex_error">
-							<h2 id="name_error"></h2>
-						</div>
-					</section>
-					<section class="film-cnt">
-						<article>
-							<div class="flex_container_center">
-								<div class="panel-body flex_sub_container_main">
-									<div class="image">
-										<img id="affiche" src="" alt="">
-									</div>
-									<div class="flex_content_data">
-										<div class="">
-											<h2 id="name"></h2>
-										</div>
-										<div class="flex_content_sub_data">
-											<div class="">
-												<h3>Date de sortie </h3><span id="released"></span>
-											</div>
-											<div class="">
-												<h3>Durée</h3><span id="runtime"> </span>
-											</div>
-										</div>
-										<div class="">
-											<h3>Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
-										</div>
-										<div id="plot_show" class="">
-											<h3>Synopsis :</h3>
-											<p><span id="plot"></span></p>
-										</div>
-										<div id="genre_show" class="">
-											<h3>Genre :</h3>
-											<p><span id="genre"></span></p>
-										</div>
-										<div class="">
-											<h3>Réalisateur :</h3>
-											<p><span id="director"></span></p>
-										</div>
-										<div class="">
-											<h3>Auteur :</h3>
-											<p><span id="writer"></span></p>
-										</div>
-										<div id="actors_show" class="">
-											<h3>Acteurs :</h3>
-											<p><span id="actors"></span></p>
-										</div>
-										<div id="language_show" class="">
-											<h3>langue :</h3>
-											<p><span id="language"></span></p>
-										</div>
-										<div id="country_show" class="">
-											<h3>Pays :</h3>
-											<p><span id="country"></span></p>
-										</div>
-										<div id="awards_show" class="">
-											<h3>Awards :</h3>
-											<p><span id="awards"></span></p>
-										</div>
-										<div id="metascore_show" class="">
-											<h3>metascore :</h3>
-											<p><span id="metascore"></span></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</article>
-					</section>
-				</div>
-			</div>
-			<div id="backhide">
-				<img src="imgs/movies.jpg" alt="">
-			</div>
-		</main>
-    <div class="favoris">
-      <table>
-        <tr>
-          <th>
-            #
-          </th>
-        </tr>
-        <tr>
-          <td>
-            TEST
-          </td>
-        </tr>
-      </table>
-      <button type="button" name="button" onclick="window.print();">Imprimer ma liste</button>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/animationButton.css.css">
+    <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
+    <title>Movie API project</title>
+</head>
+<body>
+<main>
+    <header>
+        <nav class="navbar">
+            <img src="imgs/video-player.png" alt="Logo" class="left">
+            <h1 title="Movie" class="left">movie searcher</h1>
+        </nav>
+    </header>
+    <div id="big-input" class="no_print">
+        <form action="submit">
+            <div class="container">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="keyword" type="text" placeholder="Rechercher un film ">
+                <button id="search" type="submit" class="btn btn-success">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </form>
     </div>
-        <footer class="flex_footer">
-            &copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.
-			<script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
-			<!--cght-->
-			<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script> <!-- jQuery est inclus ! -->
-			<script src="js/script.js"></script> <!-- jQuery est inclus ! -->
-			<!--cght-->
-			<script src="js/autocomplete.js"></script> <!-- jQuery est inclus ! -->
-        </footer>
-    </body>
+    <div id="main">
+        <div class="loader"><img src="imgs/icon-loader.gif" alt=""></div>
+        <section class="error">
+            <div class="col-md-12">
+                <h2 id="name_error"></h2>
+            </div>
+        </section>
+        <section class="film-cnt flex-container">
+            <article class="flex-row">
+                <div class="flex-col-md-4 no_print">
+                    <img id="affiche" src="" alt="Movie picture">
+                </div>
+                <div class="flex-col-md-4 no_print">
+                    <h2 id="name"></h2><span id="released"></span>
+                    <div class="flex-row">
+                        <div class="flex-col-md-6">
+                            <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+                        </div>
+                        <div class="flex-col-md-4">
+                            <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
+                                id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                        </div>
+                    </div>
+                    <h3>Synopsis :</h3>
+                    <p><span id="plot"></span></p>
+                </div>
+                <aside class="flex-col-md-2 favorite-list">
+                    <button id="favorite" class="btn btn-success no_print"><i class="fa fa-heart" aria-hidden="true"></i> My Favorite</button>
+                    <h2 id="titre_list_films">Liste de mes films</h2>
+                    <dl class="favListe">
+                        <dt class="favTitle"></dt>
+                        <dd class="favYear"></dd>
+                    </dl>
+                    <button type="button" name="button" onclick="window.print();" class="no_print">Imprimer ma liste</button>
+                </aside>
+            </article>
+            <table class="table no_print">
+                <tr id="genre_show">
+                    <td>Genre :</td>
+                    <td><span id="genre"></span></td>
+                </tr>
+                <tr id="director_show">
+                    <td>Réalisateur :</td>
+                    <td><span id="director"></span></td>
+                </tr>
+                <tr id="writer_show">
+                    <td>Auteur :</td>
+                    <td><span id="writer"></span></td>
+                </tr>
+                <tr id="actors_show">
+                    <td>Acteurs :</td>
+                    <td><span id="actors"></span></td>
+                </tr>
+                <tr id="language_show">
+                    <td>Langue :</td>
+                    <td><span id="language"></span></td>
+                </tr>
+                <tr id="country_show">
+                    <td>Pays :</td>
+                    <td><span id="country"></span></td>
+                </tr>
+                <tr id="awards_show">
+                    <td>Awards :</td>
+                    <td><span id="awards"></span></td>
+                </tr>
+                <tr id="metascore_show">
+                    <td>metascore:</td>
+                    <td><span id="metascore"></span></td>
+                </tr>
+            </table>
+        </section>
+    </div>
+    <div id="backhide" class="no_print">
+        <img src="imgs/movies.jpg" alt="">
+    </div>
+</main>
+<footer>
+    &copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.
+    <script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
+    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script> <!-- jQuery est inclus ! -->
+    <script src="js/script.js"></script> <!-- jQuery est inclus ! -->
+    <script src="js/favorite.js"></script> <!-- jQuery est inclus ! -->
+    <script src="js/autocomplete.js"></script> <!-- jQuery est inclus ! -->
+</footer>
+</body>
 </html>
