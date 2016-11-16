@@ -130,12 +130,10 @@ footer {
 .loader {
   display: none;
   text-align: center;
-  margin-top: 8%; }
-
-.main {
-  display: none; }
-
-.error {
+  margin-top: 8%;
+}
+.flex_error {
+  display: flex;
   color: red;
   text-align: center; }
 
@@ -457,3 +455,16 @@ footer {
     width: calc(100% * (12 / 12)); } }
 
 /*# sourceMappingURL=app.css.map */
+<<<<<<< HEAD
+=======
+.favListe{
+  margin-left: 16%;
+}
+.favListe dd{
+  margin-bottom: 10%;
+}
+
+#titre_list_films{
+  display:none;
+}
+>>>>>>> dimitri

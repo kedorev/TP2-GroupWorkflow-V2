@@ -1,0 +1,157 @@
+@black: #222222;
+.left{float: left;}
+
+body
+{
+  margin: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#main{
+  display: none;
+}
+nav {
+  background: @black;
+  padding: 10px 0;
+  width: 100%;
+  float: left;
+  h1 {
+    color: #f5f5f5;
+  }
+  ul {
+    margin-top: 25px;
+    font-size: 1.5em;
+    li {
+      display: inline-block;
+      margin-right: 5px;
+      text-align: right;
+      a {
+        color: #f3f3f3;
+        &:hover {
+          border-bottom: 4px;
+          color: #737373;
+        }
+      }
+    }
+  }
+}
+
+#big-input{
+  background: #ffffff;
+  input{
+    padding: 10px 0;
+    border:  0px;
+    transition: ease-in 0.2s;
+    width: 91%;
+  }
+  &:focus{
+    padding: 20px 0;
+  }
+  i{
+    margin-right: 1em;
+  }
+}
+.hide {
+  display: none;
+}
+
+article h2{
+  margin: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+#backhide{
+  height: 80vh;
+  overflow: hidden;
+}
+.loader{
+  display: none;
+  text-align: center;
+  margin-top: 8%;
+}
+
+.flex_error
+{
+  .flex_container;
+  color: red;
+  .flex_container_center;
+  min-height: 150px;
+}
+/*.error>div>h2{
+  padding-top: 8%;
+}*/
+
+.flex_container
+{
+  display: flex;
+}
+.flex_container_row
+{
+  .flex_container;
+  .flex_container_center;
+  flex-direction: row;
+}
+.flex_container_col
+{
+  .flex_container;
+  .flex_container_center;
+  flex-direction: column;
+}
+
+.flex_container_center
+{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_container_search
+{
+  .flex_container_row;
+  border-radius: 15px 15px 0 15px;
+  border: solid thin @black;
+  background-color: #eeeeee;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 2px;
+}
+
+.flex_footer
+{
+  .flex_container_row;
+  background: @black;
+  color: #f3f3f3;
+  padding: 10px 0;
+}
+
+.flex_container_main
+{
+  .flex_container_col;
+  width:80%;
+  margin: auto;
+}
+
+.main_background {
+  background: linear-gradient(to bottom right, #212b2d, #2f383d);
+  color: #ffffff;
+  min-height: 100%;
+}
+
+.flex_sub_container_main
+{
+  .flex_container_row;
+}
+
+.flex_content_data
+{
+  .flex_container_col;
+}
+
+.flex_content_sub_data
+{
+  .flex_container_row;
+}

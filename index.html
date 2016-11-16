@@ -10,7 +10,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="css/button.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="css/animationButton.css">
+=======
+    <link rel="stylesheet" href="css/animationButton.css.css">
+    <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
+>>>>>>> dimitri
     <title>Movie API project</title>
 </head>
 <body>
@@ -23,7 +28,7 @@
             </div>
         </nav>
     </header>
-    <div id="big-input">
+    <div id="big-input" class="no_print">
         <form action="submit">
             <div class="container">
                 <i class="fa fa-search" aria-hidden="true"></i>
@@ -43,10 +48,10 @@
         </section>
         <section class="film-cnt flex-container">
             <article class="flex-row">
-                <div class="flex-col-md-4">
+                <div class="flex-col-md-4 no_print">
                     <img id="affiche" src="" alt="Movie picture">
                 </div>
-                <div class="flex-col-md-4">
+                <div class="flex-col-md-4 no_print">
                     <h2 id="name"></h2><span id="released"></span>
                     <div class="flex-row">
                         <div class="flex-col-md-6">
@@ -60,15 +65,22 @@
                     <h3>Synopsis :</h3>
                     <p><span id="plot"></span></p>
                 </div>
+<<<<<<< HEAD
                 <aside class="flex-col-md-2">
                     <button id="favorite"class="btn btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Add to favorites</button>
+=======
+                <aside class="flex-col-md-2 favorite-list">
+                    <button id="favorite" class="btn btn-success no_print"><i class="fa fa-heart" aria-hidden="true"></i> My Favorite</button>
+                    <h2 id="titre_list_films">Liste de mes films</h2>
+>>>>>>> dimitri
                     <dl class="favListe">
                         <dt class="favTitle"></dt>
                         <dd class="favYear"></dd>
                     </dl>
+                    <button type="button" name="button" onclick="window.print();" class="no_print">Imprimer ma liste</button>
                 </aside>
             </article>
-            <table class="table">
+            <table class="table no_print">
                 <tr id="genre_show">
                     <td>Genre :</td>
                     <td><span id="genre"></span></td>
@@ -104,7 +116,7 @@
             </table>
         </section>
     </div>
-    <div id="backhide">
+    <div id="backhide" class="no_print">
         <img src="imgs/movies.jpg" alt="">
     </div>
 </main>
