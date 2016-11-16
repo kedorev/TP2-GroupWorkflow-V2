@@ -31,4 +31,5 @@ jQuery(document).ready(function(){
         var year = $('#released').text();
         return year;
     }
+
 });
