@@ -1,1 +1,1 @@
-@media print{main,footer{display:none}.favoris{width:100%}.favoris button{display:none}}
+@media print{main,footer{display:none}.favoris{width:100%}.favoris button{display:none}footer{position:fixed;bottom:0}}
