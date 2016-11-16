@@ -416,3 +416,6 @@ footer {
 .favListe dd{
   margin-bottom: 10%;
 }
+.favListe .fa-times{
+  margin-left: 87px;
+}
