@@ -11,6 +11,15 @@ jQuery(document).ready(function(){
         var result = baseUrl + keyword + endUrl;
         monAjax(result);
     });
+
+});
+
+$(document).on("scroll", function () {
+    if ($(document).scrollTop() > 100) {
+        $("nav").addClass("small");
+    } else {
+        $("nav").removeClass("small");
+    }
 });
 
 function monAjax(urlApi) {

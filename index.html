@@ -7,29 +7,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
     <title>Movie API project</title>
 </head>
 <body>
 <main>
-    <div>
-        <header>
-            <nav class="navbar">
-                <img src="imgs/video-player.png" alt="Logo" class="left">
-                <h1 title="Movie" class="left">movie searcher</h1>=
-            </nav>
-        </header>
-        <div id="big-input">
-            <form action="submit">
-                <div class="container">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <input id="keyword" type="text" placeholder="Rechercher un film ">
-                    <button id="search" type="submit" class="btn btn-success">
-                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
+    <header>
+        <nav class="navbar">
+            <img src="imgs/video-player.png" alt="Logo" class="left">
+            <h1 title="Movie" class="left">movie searcher</h1>
+        </nav>
+    </header>
+    <div id="big-input">
+        <form action="submit">
+            <div class="container">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input id="keyword" type="text" placeholder="Rechercher un film ">
+                <button id="search" type="submit" class="btn btn-success">
+                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </form>
     </div>
     <div id="main">
         <div class="loader"><img src="imgs/icon-loader.gif" alt=""></div>
@@ -38,53 +36,60 @@
                 <h2 id="name_error"></h2>
             </div>
         </section>
-        <section class="film-cnt container">
-            <article>
-                <div class="container">
-                    <img id="affiche" src="" alt="">
-                    <h2 id="name"></h2>
-                    <h3>Date de sortie </h3><span id="released"></span>
-                    <h3>Durée</h3><span id="runtime"> </span>
-                    <h3>Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
-                        id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+        <section class="film-cnt flex-container">
+            <article class="flex-row">
+                <div class="flex-col-md-4">
+                    <img id="affiche" src="" alt="Movie picture">
+                </div>
+                <div class="flex-col-md-8">
+                    <h2 id="name"></h2><span id="released"></span>
+                    <div class="flex-row">
+                        <div class="flex-col-md-4">
+                            <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+                        </div>
+                        <div class="flex-col-md-4">
+                            <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
+                                id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                        </div>
+                    </div>
                     <h3>Synopsis :</h3>
                     <p><span id="plot"></span></p>
-                    <table class="table">
-                        <tr id="genre_show">
-                            <td>Genre :</td>
-                            <td><span id="genre"></span></td>
-                        </tr>
-                        <tr id="director_show">
-                            <td>Réalisateur :</td>
-                            <td><span id="director"></span></td>
-                        </tr>
-                        <tr id="writer_show">
-                            <td>Auteur :</td>
-                            <td><span id="writer"></span></td>
-                        </tr>
-                        <tr id="actors_show">
-                            <td>Acteurs :</td>
-                            <td><span id="actors"></span></td>
-                        </tr>
-                        <tr id="language_show">
-                            <td>Langue :</td>
-                            <td><span id="language"></span></td>
-                        </tr>
-                        <tr id="country_show">
-                            <td>Pays :</td>
-                            <td><span id="country"></span></td>
-                        </tr>
-                        <tr id="awards_show">
-                            <td>Awards :</td>
-                            <td><span id="awards"></span></td>
-                        </tr>
-                        <tr id="metascore_show">
-                            <td>metascore:</td>
-                            <td><span id="metascore"></span></td>
-                        </tr>
-                    </table>
                 </div>
             </article>
+            <table class="table">
+                <tr id="genre_show">
+                    <td>Genre :</td>
+                    <td><span id="genre"></span></td>
+                </tr>
+                <tr id="director_show">
+                    <td>Réalisateur :</td>
+                    <td><span id="director"></span></td>
+                </tr>
+                <tr id="writer_show">
+                    <td>Auteur :</td>
+                    <td><span id="writer"></span></td>
+                </tr>
+                <tr id="actors_show">
+                    <td>Acteurs :</td>
+                    <td><span id="actors"></span></td>
+                </tr>
+                <tr id="language_show">
+                    <td>Langue :</td>
+                    <td><span id="language"></span></td>
+                </tr>
+                <tr id="country_show">
+                    <td>Pays :</td>
+                    <td><span id="country"></span></td>
+                </tr>
+                <tr id="awards_show">
+                    <td>Awards :</td>
+                    <td><span id="awards"></span></td>
+                </tr>
+                <tr id="metascore_show">
+                    <td>metascore:</td>
+                    <td><span id="metascore"></span></td>
+                </tr>
+            </table>
         </section>
     </div>
     <div id="backhide">
