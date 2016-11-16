@@ -12,13 +12,11 @@ body {
 #main {
   display: none; }
 
-nav {
-  background: #222222;
-  width: 100%;
-  float: left;
-  padding: 0 10%;
-  height: 100px;
+header {
   position: fixed;
+  width: 100%; }
+
+nav {
   transition: height ease-in 0.8s; }
   nav div {
     margin-top: 15px; }
@@ -37,6 +35,16 @@ nav {
           border-bottom: 4px;
           color: #737373; }
 
+.nav, nav, .nav_user {
+  background: #222222;
+  width: 100%;
+  float: left;
+  padding: 0 10%;
+  height: 100px; }
+
+.nav_user {
+  color: #ffffff; }
+
 #big-input {
   position: fixed;
   top: 100px;
@@ -50,8 +58,8 @@ nav {
     border: 0px;
     transition: ease-in 0.2s;
     width: 91%; }
-    #big-input input::-webkit-input-placeholder {
-      font-size: 1em; }
+  #big-input:focus {
+    padding: 20px 0; }
   #big-input i {
     margin-right: 1em;
     margin-top: 0.5em;
@@ -130,10 +138,12 @@ footer {
 .loader {
   display: none;
   text-align: center;
-  margin-top: 8%;
-}
-.flex_error {
-  display: flex;
+  margin-top: 8%; }
+
+.main {
+  display: none; }
+
+.error {
   color: red;
   text-align: center; }
 
@@ -455,14 +465,3 @@ footer {
     width: calc(100% * (12 / 12)); } }
 
 /*# sourceMappingURL=app.css.map */
-
-.favListe{
-  margin-left: 16%;
-}
-.favListe dd{
-  margin-bottom: 10%;
-}
-
-#titre_list_films{
-  display:none;
-}
