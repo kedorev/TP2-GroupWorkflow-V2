@@ -53,14 +53,12 @@ article {
   background: linear-gradient(to bottom right, #212b2d, #2f383d);
   color: #ffffff;
   height: 85vh; }
-
-article h2 {
-  margin: 0;
-  font-weight: 600;
-  text-transform: uppercase; }
-
-.year {
-  display: block; }
+  article h2 {
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase; }
+  article .year {
+    display: block; }
 
 footer {
   text-align: center;

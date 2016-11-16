@@ -10,7 +10,7 @@ main{
   flex-direction: column;
   justify-content: center;
 
-  
+
 }
 #main{
   display: none;
@@ -62,15 +62,16 @@ article {
   background: linear-gradient(to bottom right, #212b2d, #2f383d);
   color: #ffffff;
   height: 85vh;
+  h2{
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .year{
+    display: block;
+  }
 }
-article h2{
-  margin: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.year{
-  display: block;
-}
+
 footer{
   text-align: center;
   background: #222222;
