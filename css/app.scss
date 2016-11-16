@@ -17,6 +17,7 @@ body{
 }
 header{
   position: fixed;
+  top:0;
   width: 100%;
 }
 nav {
@@ -59,6 +60,7 @@ nav {
 {
   @extend .nav;
   color: #ffffff;
+  padding-top: 15px;
 }
 
 
@@ -106,7 +108,7 @@ nav {
 }
 article {
   color: #ffffff;
-  padding-top:20%;
+  padding-top:25%;
   h2{
     margin: 0;
     font-weight: 600;
@@ -116,6 +118,8 @@ article {
     display: block;
   }
 }
+
+
 
 aside {
   button {

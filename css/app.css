@@ -14,6 +14,7 @@ body {
 
 header {
   position: fixed;
+  top: 0;
   width: 100%; }
 
 nav {
@@ -43,7 +44,8 @@ nav {
   height: 100px; }
 
 .nav_user {
-  color: #ffffff; }
+  color: #ffffff;
+  padding-top: 15px; }
 
 #big-input {
   position: fixed;
@@ -80,7 +82,7 @@ nav {
 
 article {
   color: #ffffff;
-  padding-top: 20%; }
+  padding-top: 25%; }
   article h2 {
     margin: 0;
     font-weight: 600;
