@@ -9,17 +9,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to bottom right, #212b2d, #2f383d); }
 
-main {
-  /*display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;*/ }
-
 #main {
   display: none; }
 
@@ -417,3 +406,9 @@ footer {
     width: calc(100% * (12 / 12)); } }
 
 /*# sourceMappingURL=app.css.map */
+.favListe{
+  margin-left: 16%;
+}
+.favListe dd{
+  margin-bottom: 10%;
+}
