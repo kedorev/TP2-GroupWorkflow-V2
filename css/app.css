@@ -12,15 +12,16 @@ body {
 #main {
   display: none; }
 
-.small {
-  height: 200px; }
-
 nav {
   background: #222222;
   width: 100%;
   float: left;
   padding: 0 10%;
-  height: 200px; }
+  height: 100px;
+  position: fixed;
+  transition: height ease-in 0.8s; }
+  nav div {
+    margin-top: 15px; }
   nav h1 {
     color: #f5f5f5; }
   nav ul {
@@ -37,23 +38,41 @@ nav {
           color: #737373; }
 
 #big-input {
+  position: fixed;
+  top: 100px;
+  width: 80%;
   background: #ffffff;
-  justify-content: center;
-  padding: 0 11%; }
+  padding: 0 10%;
+  height: 50px;
+  transition: ease-out 0.5s; }
   #big-input input {
     padding: 10px 0;
     border: 0px;
     transition: ease-in 0.2s;
     width: 91%; }
-  #big-input:focus {
-    padding: 20px 0; }
+    #big-input input::-webkit-input-placeholder {
+      font-size: 1em; }
   #big-input i {
     margin-right: 1em;
-    width: 2em; }
+    margin-top: 0.5em;
+    font-size: 1.5em; }
+  #big-input .btn-search {
+    background: none;
+    border: none;
+    transition: ease-in  0.5s; }
+    #big-input .btn-search:hover {
+      transform: rotate(90deg);
+      cursor: pointer; }
+
+#intro img {
+  width: 100%; }
+
+#backhide img {
+  width: 100%; }
 
 article {
   color: #ffffff;
-  padding: 5em 0; }
+  padding-top: 20%; }
   article h2 {
     margin: 0;
     font-weight: 600;
@@ -71,10 +90,6 @@ footer {
   width: 100%;
   font-weight: 300;
   font-style: italic; }
-
-#backhide {
-  height: 90vh;
-  overflow: hidden; }
 
 .loader {
   display: none;

@@ -16,9 +16,9 @@ jQuery(document).ready(function(){
 
 $(document).on("scroll", function () {
     if ($(document).scrollTop() > 100) {
-        $("nav").addClass("small");
+        $("#big-input").addClass("hide");
     } else {
-        $("nav").removeClass("small");
+        $("#big-input").removeClass("hide");
     }
 });
 

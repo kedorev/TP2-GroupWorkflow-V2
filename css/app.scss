@@ -12,32 +12,21 @@ body{
   font-family: 'Open Sans', sans-serif;
   background: linear-gradient(to bottom right, #212b2d, #2f383d);
 }
-
-main{
-  /*display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;*/
-}
-
 #main{
   display: none;
 }
 
-.small{
-  height: 200px;
-}
 nav {
   background: $black;
   width: 100%;
   float: left;
   padding: 0 10%;
-  height: 200px;
+  height: 100px;
+  position: fixed;
+  transition: height ease-in 0.8s;
+  div{
+    margin-top: 15px;
+  }
   h1 {
     color: #f5f5f5;
   }
@@ -60,26 +49,50 @@ nav {
 }
 
 #big-input{
+  position: fixed;
+  top: 100px;
+  width: 80%;
   background: #ffffff;
-  justify-content: center;
-  padding: 0 11%;
+  padding: 0 10%;
+  height: 50px;
+  transition: ease-out 0.5s;
   input{
     padding: 10px 0;
     border:  0px;
     transition: ease-in 0.2s;
     width: 91%;
-  }
-  &:focus{
-    padding: 20px 0;
+    &::-webkit-input-placeholder{
+      font-size: 1em;
+    }
   }
   i{
     margin-right: 1em;
-    width: 2em;
+    margin-top: 0.5em;
+    font-size: 1.5em;
+  }
+  .btn-search{
+    background: none;
+    border: none;
+    transition: ease-in  0.5s;
+    &:hover{
+      transform: rotate(90deg);
+      cursor: pointer;
+    }
+  }
+}
+#intro{
+  img{
+    width: 100%;
+  }
+}
+#backhide{
+  img{
+    width: 100%;
   }
 }
 article {
   color: #ffffff;
-  padding: 5em 0;
+  padding-top:20%;
   h2{
     margin: 0;
     font-weight: 600;
@@ -101,10 +114,7 @@ footer{
   font-weight: 300;
   font-style: italic;
 }
-#backhide{
-  height: 90vh;
-  overflow: hidden;
-}
+
 .loader{
   display: none;
   text-align: center;
