@@ -1,5 +1,4 @@
 jQuery(document).ready(function(){
-
     $( "#search" ).click(function(e) {
         var baseUrl;
         var endUrl;
@@ -15,6 +14,14 @@ jQuery(document).ready(function(){
             var keyword = $('#keyword').val();
             var result = baseUrl + keyword + endUrl;
             monAjax(result);
+            $('.favListe').html("");
+
+            // $('.favListe').append(localStorage.getItem("Test"));
+            for(var i = 0; i < localStorage.length; i++){
+                console.log(localStorage.key(i));
+                var array = localStorage.getItem(localStorage.key(i))
+                $('.favListe').append(array);
+            }
         });
     });
 
@@ -139,7 +146,6 @@ function Affichage(data){
 
     }// Fin du else
 }
-
 function hideLoader(reponse) {
     $('.loader').css("display","none");
     $('#keyword').val('');
