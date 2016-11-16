@@ -26,26 +26,30 @@ main {
 .small {
   height: 200px; }
 
-nav {
+nav h1 {
+  color: #f5f5f5; }
+nav ul {
+  margin-top: 25px;
+  font-size: 1.5em; }
+  nav ul li {
+    display: inline-block;
+    margin-right: 5px;
+    text-align: right; }
+    nav ul li a {
+      color: #f3f3f3; }
+      nav ul li a:hover {
+        border-bottom: 4px;
+        color: #737373; }
+
+.nav, nav, .nav_user {
   background: #222222;
   width: 100%;
   float: left;
   padding: 0 10%;
   height: 200px; }
-  nav h1 {
-    color: #f5f5f5; }
-  nav ul {
-    margin-top: 25px;
-    font-size: 1.5em; }
-    nav ul li {
-      display: inline-block;
-      margin-right: 5px;
-      text-align: right; }
-      nav ul li a {
-        color: #f3f3f3; }
-        nav ul li a:hover {
-          border-bottom: 4px;
-          color: #737373; }
+
+.nav_user {
+  color: #ffffff; }
 
 #big-input {
   background: #ffffff;

@@ -1,0 +1,9 @@
+{
+  "script":
+  {
+    "baseUrl": "http://www.omdbapi.com/?t=",
+    "endUrl": "('&y=&plot=full&r=json')",
+    "NA": "N/A",
+    "imageNotFound": "imgs/noimagefound.jpg"
+  }
+}

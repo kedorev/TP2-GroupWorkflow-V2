@@ -12,11 +12,22 @@
 </head>
 <body>
 <main>
-    <header>
-        <nav class="navbar">
+    <header class="flex-row">
+        <nav class="navbar flex-col-md-8">
             <img src="imgs/video-player.png" alt="Logo" class="left">
             <h1 title="Movie" class="left">movie searcher</h1>
         </nav>
+        <div class="nav_user flex-col-md-4">
+            <div id="login">
+                Connexion
+            </div>
+            <div id="user_info">
+                <span id="user"></span>
+            </div>
+            <div id="logout" >
+                Déconnexion
+            </div>
+        </div>
     </header>
     <div id="big-input">
         <form action="submit">
@@ -37,59 +48,61 @@
             </div>
         </section>
         <section class="film-cnt flex-container">
-            <article class="flex-row">
-                <div class="flex-col-md-4">
-                    <img id="affiche" src="" alt="Movie picture">
-                </div>
-                <div class="flex-col-md-8">
-                    <h2 id="name"></h2><span id="released"></span>
-                    <div class="flex-row">
-                        <div class="flex-col-md-4">
-                            <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+            <article>
+                <div class="flex-row">
+                    <div class="flex-col-md-4">
+                        <img id="affiche" src="" alt="Movie picture">
+                    </div>
+                    <div class="flex-col-md-8">
+                        <h2 id="name"></h2><span id="released"></span>
+                        <div class="flex-row">
+                            <div class="flex-col-md-4">
+                                <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+                            </div>
+                            <div class="flex-col-md-4">
+                                <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
+                                    id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                            </div>
                         </div>
-                        <div class="flex-col-md-4">
-                            <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
-                                id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                        <h3>Synopsis :</h3>
+                        <p><span id="plot"></span></p>
+                    </div>
+                    <div class="flex-row">
+                        <div class="flex-col-md-2 genre_show">
+                            <h3>Genre : </h3>
+                            <span id="genre"></span>
+                        </div>
+                        <div class="flex-col-md-3 director_show">
+                            <h3>Réalisateur : </h3>
+                            <span id="director"></span>
+                        </div>
+                        <div class="flex-col-md-4 writer_show">
+                            <h3>Auteur : </h3>
+                            <span id="writer"></span>
+                        </div>
+                        <div class="flex-col-md-3 country_show">
+                            <h3>Pays : </h3>
+                            <span id="country"></span>
+                        </div>
+                        <div class="flex-col-md-12 actors_show">
+                            <h3>Acteurs : </h3>
+                            <span id="actors"></span>
+                        </div>
+                        <div class="flex-col-md-3 language_show">
+                            <h3>Langue : </h3>
+                            <span id="language"></span>
+                        </div>
+                        <div class="flex-col-md-3 awards_show">
+                            <h3>Récompense : </h3>
+                            <span id="awards"></span>
+                        </div>
+                        <div class="flex-col-md-2 metascore_show">
+                            <h3>metascore : </h3>
+                            <span id="metascore"></span>
                         </div>
                     </div>
-                    <h3>Synopsis :</h3>
-                    <p><span id="plot"></span></p>
                 </div>
             </article>
-            <table class="table">
-                <tr id="genre_show">
-                    <td>Genre :</td>
-                    <td><span id="genre"></span></td>
-                </tr>
-                <tr id="director_show">
-                    <td>Réalisateur :</td>
-                    <td><span id="director"></span></td>
-                </tr>
-                <tr id="writer_show">
-                    <td>Auteur :</td>
-                    <td><span id="writer"></span></td>
-                </tr>
-                <tr id="actors_show">
-                    <td>Acteurs :</td>
-                    <td><span id="actors"></span></td>
-                </tr>
-                <tr id="language_show">
-                    <td>Langue :</td>
-                    <td><span id="language"></span></td>
-                </tr>
-                <tr id="country_show">
-                    <td>Pays :</td>
-                    <td><span id="country"></span></td>
-                </tr>
-                <tr id="awards_show">
-                    <td>Awards :</td>
-                    <td><span id="awards"></span></td>
-                </tr>
-                <tr id="metascore_show">
-                    <td>metascore:</td>
-                    <td><span id="metascore"></span></td>
-                </tr>
-            </table>
         </section>
     </div>
     <div id="backhide">
@@ -100,6 +113,7 @@
     &copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.
     <script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
     <script src="js/script.js"></script> <!-- jQuery est inclus ! -->
+    <script src="js/login.js"></script> <!-- jQuery est inclus ! -->
 </footer>
 </body>
 </html>
