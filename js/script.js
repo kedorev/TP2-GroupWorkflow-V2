@@ -10,6 +10,14 @@ jQuery(document).ready(function(){
         var endUrl = ('&y=&plot=full&r=json');
         var result = baseUrl + keyword + endUrl;
         monAjax(result);
+        $('.favListe').html("");
+
+            // $('.favListe').append(localStorage.getItem("Test"));
+            for(var i = 0; i < localStorage.length; i++){
+                console.log(localStorage.key(i));
+                var array = localStorage.getItem(localStorage.key(i))
+                $('.favListe').append(array);
+        }
     });
 
 });
