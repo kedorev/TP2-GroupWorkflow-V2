@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
@@ -12,27 +11,26 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/animationButton.css">
     <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
-
     <title>Movie API project</title>
 </head>
 <body>
 <main>
     <header class="flex-row">
         <nav class="navbar flex-col-md-8">
-            <div>
+            <div class="logo-wrap">
                 <img src="imgs/video-player.png" alt="Logo" class="logo left">
                 <h1 title="Movie" class="left">movie searcher</h1>
             </div>
         </nav>
         <div class="nav_user flex-col-md-4">
             <div id="login">
-                Connexion
+                <button type="submit" class="sign-in2">Sign in</button>
             </div>
             <div id="user_info">
-                <i class="fa fa-user" aria-hidden="true"></i> <span id="user"></span>
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i><span id="user"></span>
             </div>
-            <div id="logout" >
-                <button><i class="fa fa-times" aria-hidden="true"></i> Déconnexion</button>
+            <div id="logout">
+                <button  type="submit" class="sign-out">Sign out</button>
             </div>
         </div>
     </header>
@@ -47,8 +45,15 @@
             </div>
         </form>
     </div>
+    <div class="loader">
+        <img src="imgs/icon-loader.gif" alt="">
+        <div id="loader">
+            <div id="top"></div>
+            <div id="bottom"></div>
+            <div id="line"></div>
+        </div>
+    </div>
     <div id="main">
-        <div class="loader"><img src="imgs/icon-loader.gif" alt=""></div>
         <section class="error">
             <div class="col-md-12">
                 <h2 id="name_error"></h2>
@@ -126,16 +131,28 @@
     </div>
     <div id="backhide" class="no_print">
         <img src="imgs/movies.jpg" alt="">
+        <div id="overlay" class="overlay"><a href="#" class="signin">Sign In</a>
+            <p>Welcome to your blablabla</p>
+            <form class="signinform">
+                <div class="signinform-field fadeIn">
+                    <label for="name">Enter a user name</label>
+                    <input id="user-name" type="text" />
+                </div>
+                <div class="fadeIn">
+                    <button id="btSubmit" type="submit" class="signin-submit">Sign in</button>
+                </div>
+            </form>
+        </div>
     </div>
 </main>
 <footer>
-    &copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.
-    <script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/script.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/favorite.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/autocomplete.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/login.js"></script>
+   <p>&copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.</p>
 </footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/favorite.js"></script>
+<script src="js/autocomplete.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
