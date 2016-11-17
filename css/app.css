@@ -4,6 +4,10 @@
 .hide {
   display: none; }
 
+/*Print div hide default*/
+#to_print {
+  display: none; }
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;

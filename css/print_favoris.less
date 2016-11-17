@@ -1,20 +1,56 @@
 // out: print_favoris.css, sourcemap: true, compress: true
+@color_table_border: #d1caca;
 @media print {
+    /* On cache tout ce qui ne doit pas être imprimé */
     .no_print{
       display: none;
     }
-    nav{
-      height: 0px;
-    }
-    #titre_list_films{
+
+    /* On affiche la div où il y a les favoris à imprimer */
+    #to_print{
+      margin-top: 50px;
+      padding: 15px;
+      color: #fff;
       display:block;
-    }
-    .favorite-list{
-      margin-top: 10px;
-      font-size: 20px;
-    }
-    .favListe{
-      width: auto;
-      padding-bottom: 5px;
+      table{
+        border: solid @color_table_border 2px;
+        font-size: 12px;
+      }
+      .div_name_print{
+        float: left;
+        margin-left: 100px;
+        border-left: solid @color_table_border 1px;
+        padding-left: 15px;
+        h4{
+          margin-top: 5px;
+        }
+      }
+      table{
+        thead{
+          tr{
+            td{
+              border-bottom: solid @color_table_border 2px;
+            }
+          }
+        }
+        tbody.favListePrintLess{
+          td{
+            border-bottom: @color_table_border 1px dashed;
+          }
+        }
+        tbody.favListePrintMore{
+          .favTitlePlot{
+            td{
+              border-bottom: @color_table_border 1px dashed;
+              padding-bottom: 3px;
+            }
+          }
+        }
+      }
+      .nav_print{
+        height: 100px;
+        position: absolute;
+        top:0;
+      }
     }
 }

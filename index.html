@@ -19,14 +19,14 @@
 </head>
 <body>
 <main>
-    <header class="flex-row">
-        <nav class="navbar flex-col-md-8">
+    <header class="flex-row no_print">
+        <nav class="navbar flex-col-md-8 no_print">
             <div class="logo-wrap">
                 <a href="index.html"><img src="imgs/video-player.png" alt="Logo" class="logo left"></a>
                 <h1 title="Movie" class="left">movie searcher</h1>
             </div>
         </nav>
-        <div class="nav_user flex-col-md-4">
+        <div class="nav_user flex-col-md-4 no_print">
             <div id="login">
                 <button type="submit" class="sign-in2">Sign in</button>
             </div>
@@ -56,13 +56,13 @@
             <div id="line"></div>
         </div>
     </div>
-    <div id="main">
+    <div id="main" class="no_print">
         <section class="error">
             <div class="col-md-12">
                 <h2 id="name_error"></h2>
             </div>
         </section>
-        <section class="film-cnt flex-container">
+        <section class="film-cnt flex-container no_print">
             <article class="flex-row">
                 <div class="flex-col-md-10 no_print">
                     <div class="flex-row">
@@ -127,7 +127,8 @@
                         <dt class="favTitle"></dt>
                         <dd class="favYear"></dd>
                     </dl>
-                    <button type="button" name="button" onclick="window.print();" class="no_print">Imprimer ma liste</button>
+                    <input type="checkbox" id="print_more" name="name" value=""><label for="print_more">Imprimer plus d'infos</label>
+                    <button type="button" name="button" id="print_fav"><i class="fa fa-print" aria-hidden="true"></i> Imprimer ma liste</button>
                 </aside>
             </article>
         </section>
@@ -147,8 +148,40 @@
             </div>
         </form>
     </div>
+    <div id="to_print">
+      <div class="nav_print">
+          <div class="logo-wrap">
+              <img src="imgs/video-player.png" alt="Logo" class="logo left">
+              <h1 title="Movie" class="left">movie searcher</h1>
+              <div class="div_name_print"><srong>Votre nom :</srong><h4 id="name_print"></h4></div>
+          </div>
+      </div>
+      <h2><i class="fa fa-film" aria-hidden="true"></i> Liste de mes films</h2>
+      <table id="fav_less_infos" class="">
+        <thead>
+          <tr>
+            <td>Nom du film</td>
+          </tr>
+        </thead>
+        <tbody class="favListePrintLess">
+
+        </tbody>
+      </table>
+      <table id="fav_more_infos" class="">
+        <thead>
+          <tr>
+            <td>Nom du film</td>
+            <td>Réalisateur</td>
+            <td>Date de sortie</td>
+          </tr>
+        </thead>
+        <tbody class="favListePrintMore">
+
+        </tbody>
+      </table>
+    </div>
 </main>
-<footer>
+<footer class="no_print">
    <p>&copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.</p>
 </footer>
 <script src="js/jquery.min.js"></script>
