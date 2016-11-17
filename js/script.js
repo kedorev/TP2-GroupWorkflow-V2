@@ -19,13 +19,29 @@ jQuery(document).ready(function(){
             monAjax(result);
             $('.favListe').html("");
             for(var i = 0; i < localStorage.length; i++){
-                console.log(localStorage.key(i));
-                if((localStorage.key(i) !="user")){
-                    var array = localStorage.getItem(localStorage.key(i))
-                    $('.favListe').append(array);
+                if(localStorage.key(i) != 'block_print_more' && localStorage.key(i) != 'block_print_less' && localStorage.key(i) != 'user'){
+                  var array = localStorage.getItem(localStorage.key(i));
+                  $('.favListe').append(array);
                 }
             }
+            // Réapprovisionnement du div print à chaque chargement de page
+            var block_print_more = localStorage.getItem('block_print_more');
+            var block_print_less = localStorage.getItem('block_print_less');
+            $('.favListePrintMore').html(block_print_more);
+            $('.favListePrintLess').html(block_print_less);
         });
+    });
+
+    // Clic bouton Impression liste favoris
+    $('#print_fav').on('click', function(){
+      if( $('#print_more').is(':checked') ){
+          $('#fav_more_infos').removeClass('no_print');
+          $('#fav_less_infos').addClass('no_print');
+      } else {
+          $('#fav_less_infos').removeClass('no_print');
+          $('#fav_more_infos').addClass('no_print');
+      }
+      window.print();
     });
 
 });

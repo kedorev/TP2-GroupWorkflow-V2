@@ -1,6 +1,6 @@
 $black: #222222;
 $green: #00d373;
-
+$red:  #e50914;
 $device-xs: 540px;
 $device-sm: 768px;
 $device-md: 992px;
@@ -8,11 +8,12 @@ $device-lg: 1200px;
 
 .left{float: left;}
 .hide {display: none;}
-
+/*Print div hide default*/
+#to_print{display: none;}
 body{
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to bottom right, #212b2d, #2f383d);
+  background: #2f383d;
 }
 #main{
   display: none;
@@ -142,39 +143,59 @@ article {
 
 
 aside {
+  padding-left: 2.5em;
+  h3{
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .favListe{
+    dt{
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+    dd{
+      font-size: 0.8em;
+      font-weight: 300;
+      font-style: italic;
+    }
+    i{
+      margin-right: 0.2em;
+      color: #f4f4f4;
+    }
+  }
+  label{
+    font-size: 0.8em;
+  }
   button {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
-    background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-    background-color:#ededed;
+    margin-bottom: 1.5em;
     display:inline-block;
     cursor:pointer;
-    color:#3a8a9e;
-    font-family:Arial;
-    font-size:17px;
-    padding:7px 25px;
+    color:#222222;
     text-decoration:none;
-    text-shadow:0px 1px 0px #e1e2ed;
+    white-space: nowrap;
+    border:none;
+    font-size:1em;
+    background: #ffffff;
+    padding: 0.6em 1.5em;
+    transition: ease-in 0.5s;
     &:hover {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
-      background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
-      background-color:#bab1ba;
+      background: #222222;
+      color: #ffffff;
+    }
+    i{
+      color: $red;
     }
     &:active {
       position:relative;
       top:1px;
     }
   }
-  button:hover i.fa-heart{
-    color: indianred;
+  #print_fav{
+    margin-top: 1.5em;
+    i{
+      color:$green;
+    }
   }
 }
 @keyframes pulse {
@@ -301,7 +322,6 @@ footer{
     input{
       width:65%;
     }
-
   }
   .nav_user{
     #user_info{
@@ -383,7 +403,7 @@ footer{
 }
 
 .sign{
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   position:relative;
@@ -391,8 +411,8 @@ footer{
   border:none;
   font-size:1em;
   display: block;
-  max-width:130px;
   padding: 0.6em 1.5em;
+  max-width:130px;
 }
 .sign-in2{
   @extend .sign;
@@ -408,7 +428,6 @@ footer{
     cursor: pointer;
   }
 }
-
 .signin{
   @extend .sign;
   margin: 0 auto;
@@ -433,7 +452,7 @@ footer{
   @extend .sign;
   display:block;
   margin: 0.5em 0;
-  background: #e50914;
+  background:$red;
   &:hover{
     cursor: pointer;
     opacity: 0.8;
@@ -709,4 +728,3 @@ footer{
   10% { height: 40px; }
   100% { height: 40px; }
 }
-

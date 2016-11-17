@@ -64,7 +64,14 @@ function show_login_without_overlay()
  */
 function show_logout()
 {
-    $("#user").text("Welcome "+localStorage.getItem('user'));
+    $("#user").text(localStorage.getItem('user'));
+    // Si l'user est connecté, on l'affiche aussi dans le nom de l'user qui sera imprimé
+    $("#name_print").text(localStorage.getItem('user'));
+    if(localStorage.getItem('user') != '' || localStorage.getItem('user') != undefined){
+      $("#name_print").show();
+    }else{
+      $("#name_print").hide();
+    }
     $("#login").hide();
     $("#logout").show();
     $("#user_info").show();
