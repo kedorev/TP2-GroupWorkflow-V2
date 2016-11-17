@@ -50,7 +50,8 @@ nav {
     font-size: 1.1em;
     font-style: italic;
     font-weight: 600;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-left: 0.6em; }
 
 #big-input {
   position: fixed;
@@ -81,6 +82,16 @@ nav {
 
 #intro img {
   width: 100%; }
+
+.intro-txt {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  top: 200px; }
 
 #backhide img {
   width: 100%; }
@@ -138,12 +149,14 @@ footer {
   padding: 10px 0;
   width: 100%;
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+  position: absolute;
+  bottom: 0; }
 
 .loader {
   display: none;
   text-align: center;
-  margin-top: 8%; }
+  margin-top: 20%; }
 
 .main {
   display: none; }
@@ -567,7 +580,6 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
-  padding-top: 10vh;
   width: 250px;
   transform: translateX(-50%) translateY(-50%); }
 
@@ -729,9 +741,9 @@ footer {
     transform: rotate(180deg); } }
 #top {
   animation: top 5s linear infinite;
-  border-top: 20px solid #fff;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
+  border-top: 40px solid #00d373;
+  border-right: 40px solid transparent;
+  border-left: 40px solid transparent;
   height: 0px;
   width: 1px;
   transform-origin: 50% 100%; }
@@ -743,9 +755,9 @@ footer {
     transform: scale(0); } }
 #bottom {
   animation: bottom 5s linear infinite;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid #fff;
-  border-left: 20px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid #00d373;
+  border-left: 40px solid transparent;
   height: 0px;
   width: 1px;
   transform: scale(0);
@@ -760,17 +772,17 @@ footer {
     transform: scale(1); } }
 #line {
   animation: line 5s linear infinite;
-  border-left: 1px dotted #fff;
+  border-left: 1px dotted #00d373;
   height: 0px;
   width: 0px;
   position: absolute;
-  top: 20px;
-  left: 20px; }
+  top: 40px;
+  left: 40px; }
 
 @keyframes line {
   10% {
-    height: 20px; }
+    height: 40px; }
   100% {
-    height: 20px; } }
+    height: 40px; } }
 
 /*# sourceMappingURL=app.css.map */
