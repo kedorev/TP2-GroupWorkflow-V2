@@ -18,12 +18,12 @@ jQuery(document).ready(function(){
             var result = baseUrl + keyword + endUrl;
             monAjax(result);
             $('.favListe').html("");
-
-            // $('.favListe').append(localStorage.getItem("Test"));
             for(var i = 0; i < localStorage.length; i++){
                 console.log(localStorage.key(i));
-                var array = localStorage.getItem(localStorage.key(i))
-                $('.favListe').append(array);
+                if((localStorage.key(i) !="user")){
+                    var array = localStorage.getItem(localStorage.key(i))
+                    $('.favListe').append(array);
+                }
             }
         });
     });
@@ -144,6 +144,10 @@ function Affichage(data){
             if (data.imdbVotes && data.imdbVotes != NA) {
                 $('#imdbVotes_show').show();
                 $('#imdbVotes').text(data.imdbVotes);
+            }
+            if (data.imdbID) {
+                $('#imdbID').show();
+                $('#imdbID').text(data.imdbID);
             }
             reponse = data.Response;
             setTimeout(hideLoader(reponse), 1500);
