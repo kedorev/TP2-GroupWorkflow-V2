@@ -1,5 +1,6 @@
 $black: #222222;
 $green: #00d373;
+$red:  #e50914;
 $device-xs: 540px;
 $device-sm: 768px;
 $device-md: 992px;
@@ -140,20 +141,58 @@ article {
 }
 
 aside {
+  padding-left: 2.5em;
+  h3{
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .favListe{
+    dt{
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+    dd{
+      font-size: 0.8em;
+      font-weight: 300;
+      font-style: italic;
+    }
+    i{
+      margin-right: 0.2em;
+      color: #f4f4f4;
+    }
+  }
+  label{
+    font-size: 0.8em;
+  }
   button {
+    margin-bottom: 1.5em;
     display:inline-block;
     cursor:pointer;
-    color:#3a8a9e;
+    color:#222222;
     text-decoration:none;
     white-space: nowrap;
     border:none;
     font-size:1em;
-    background: transparent;
+    background: #ffffff;
+    padding: 0.6em 1.5em;
+    transition: ease-in 0.5s;
     &:hover {
+      background: #222222;
+      color: #ffffff;
+    }
+    i{
+      color: $red;
     }
     &:active {
       position:relative;
       top:1px;
+    }
+  }
+  #print_fav{
+    margin-top: 1.5em;
+    i{
+      color:$green;
     }
   }
 }
@@ -325,7 +364,7 @@ footer{
 }
 
 .sign{
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   position:relative;
@@ -333,8 +372,8 @@ footer{
   border:none;
   font-size:1em;
   display: block;
-  max-width:130px;
   padding: 0.6em 1.5em;
+  max-width:130px;
 }
 .sign-in2{
   @extend .sign;
@@ -362,7 +401,7 @@ footer{
   @extend .sign;
   display:block;
   margin: 0.5em 0;
-  background: #e50914;
+  background:$red;
   &:hover{
     cursor: pointer;
     opacity: 0.8;

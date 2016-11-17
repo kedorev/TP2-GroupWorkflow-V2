@@ -111,18 +111,48 @@ article {
   article .year {
     display: block; }
 
-aside button {
-  display: inline-block;
-  cursor: pointer;
-  color: #3a8a9e;
-  text-decoration: none;
-  white-space: nowrap;
-  border: none;
-  font-size: 1em;
-  background: transparent; }
-  aside button:active {
-    position: relative;
-    top: 1px; }
+aside {
+  padding-left: 2.5em; }
+  aside h3 {
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase; }
+  aside .favListe dt {
+    font-size: 0.9em;
+    font-weight: 300; }
+  aside .favListe dd {
+    font-size: 0.8em;
+    font-weight: 300;
+    font-style: italic; }
+  aside .favListe i {
+    margin-right: 0.2em;
+    color: #f4f4f4; }
+  aside label {
+    font-size: 0.8em; }
+  aside button {
+    margin-bottom: 1.5em;
+    display: inline-block;
+    cursor: pointer;
+    color: #222222;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    font-size: 1em;
+    background: #ffffff;
+    padding: 0.6em 1.5em;
+    transition: ease-in 0.5s; }
+    aside button:hover {
+      background: #222222;
+      color: #ffffff; }
+    aside button i {
+      color: #e50914; }
+    aside button:active {
+      position: relative;
+      top: 1px; }
+  aside #print_fav {
+    margin-top: 1.5em; }
+    aside #print_fav i {
+      color: #00d373; }
 
 @keyframes pulse {
   0% {
@@ -504,7 +534,7 @@ footer {
   -webkit-mask-position: center 60%; }
 
 .sign, .sign-in2, .signin-submit, .signin, .sign-out {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
@@ -512,8 +542,8 @@ footer {
   border: none;
   font-size: 1em;
   display: block;
-  max-width: 130px;
-  padding: 0.6em 1.5em; }
+  padding: 0.6em 1.5em;
+  max-width: 130px; }
 
 .sign-in2 {
   background-color: transparent; }

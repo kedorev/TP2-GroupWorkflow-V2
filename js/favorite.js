@@ -13,10 +13,11 @@ jQuery(document).ready(function(){
             }, 4000);
 
 
+
         }else{
             favListe.push(getTitre());
-            var blockTitre = '<dt class="favTitle'+ getTitre() +'">'+ getTitre()+'</dt>';
-            var blockYear = '<dd class="favYear'+ getYear() +'">'+ getYear()+'</dd>';
+            var blockTitre = '<dt class="favTitle'+ getTitre() +'"><i class="fa fa-film"></i>'+ getTitre()+'</dt>';
+            var blockYear = '<dd class="favYear'+ getYear() +'"><i class="fa fa-calendar"></i>'+ getYear()+'</dd>';
             $('.favListe').append(blockTitre);
             $('.favListe').append(blockYear);
             var array = blockTitre + blockYear;
