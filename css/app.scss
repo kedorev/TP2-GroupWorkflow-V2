@@ -1,6 +1,5 @@
 $black: #222222;
 $green: #00d373;
-
 $device-xs: 540px;
 $device-sm: 768px;
 $device-md: 992px;
@@ -12,7 +11,7 @@ $device-lg: 1200px;
 body{
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: linear-gradient(to bottom right, #212b2d, #2f383d);
+  background: #2f383d;
 }
 #main{
   display: none;
@@ -139,42 +138,22 @@ article {
   }
 }
 
-
-
 aside {
   button {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
-    background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
-    background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-    background-color:#ededed;
     display:inline-block;
     cursor:pointer;
     color:#3a8a9e;
-    font-family:Arial;
-    font-size:17px;
-    padding:7px 25px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #e1e2ed;
+    white-space: nowrap;
+    border:none;
+    font-size:1em;
+    background: transparent;
     &:hover {
-      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
-      background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
-      background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
-      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
-      background-color:#bab1ba;
     }
     &:active {
       position:relative;
       top:1px;
     }
-  }
-  button:hover i.fa-heart{
-    color: indianred;
   }
 }
 @keyframes pulse {

@@ -35,7 +35,7 @@ function show_login()
 
 function show_logout()
 {
-    $("#user").text("Welcome "+localStorage.getItem('user'));
+    $("#user").text(localStorage.getItem('user'));
     $("#login").hide();
     $("#logout").show();
     $("#user_info").show();
