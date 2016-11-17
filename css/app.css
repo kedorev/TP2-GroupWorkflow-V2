@@ -774,3 +774,9 @@ footer {
     height: 20px; } }
 
 /*# sourceMappingURL=app.css.map */
+
+
+/* PRINT DIV */
+#to_print{
+  display:none;
+}
