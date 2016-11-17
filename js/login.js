@@ -13,9 +13,12 @@ jQuery(document).ready(function(){
 
 
     $( "#login" ).click(function(e) {
-        var person = $("#user-name").val();
-        localStorage.setItem('user',person);
-        show_logout()
+
+        show_login_with_overlay();
+    });
+
+    $( "#skipLogin" ).click(function(e) {
+        show_login_without_overlay();
     });
 
 
@@ -25,14 +28,40 @@ jQuery(document).ready(function(){
     });
 });
 
+/**
+ * mixin class
+ */
 function show_login()
 {
-    $('#overlay').show();
     $("#logout").hide();
     $("#login").show();
     $("#user_info").hide();
 }
 
+/**
+ * show data with login option with the overlay
+ */
+function show_login_with_overlay()
+{
+    $('#overlay').show();
+    show_login();
+}
+
+
+/**
+ * show data with login option with the overlay
+ */
+function show_login_without_overlay()
+{
+    $('#overlay').hide();
+    $('#skipLogin').show();
+    show_login();
+}
+
+
+/**
+ * show data with logout option
+ */
 function show_logout()
 {
     $("#user").text("Welcome "+localStorage.getItem('user'));
@@ -43,7 +72,9 @@ function show_logout()
 }
 
 
-
+/**
+ *
+ */
 $('.signin').hover(function() {}, function() {
     $(this).addClass('animateout');
     setTimeout(function() {
@@ -51,16 +82,26 @@ $('.signin').hover(function() {}, function() {
     }, 750);
 });
 
+/**
+ *
+ */
 $('.signin').on('click', function() {
     $('.overlay').toggleClass('active');
+    $('#skipLogin').hide();
     $('signinform-field').removeClass('focus');
     $('input').val('');
 });
 
+/**
+ *
+ */
 $('input').focus(function() {
     $(this).parent().addClass('focus');
 });
 
+/**
+ * Add the user into the local storage
+ */
 $('#btSubmit').on('click', function() {
     var person = $("#user-name").val();
     localStorage.setItem('user',person);

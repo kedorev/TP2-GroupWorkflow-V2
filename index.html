@@ -22,6 +22,7 @@
                 <h1 title="Movie" class="left">movie searcher</h1>
             </div>
         </nav>
+        <!--Login area header-->
         <div class="nav_user flex-col-md-4">
             <div id="login">
                 <button type="submit" class="sign-in2">Sign in</button>
@@ -34,6 +35,7 @@
             </div>
         </div>
     </header>
+    <!--search area-->
     <div id="big-input" class="no_print">
         <form action="submit">
             <div class="container">
@@ -52,16 +54,20 @@
             <div id="line"></div>
         </div>
     </div>
+    <!--Main area-->
     <div id="main">
+        <!--Section error area-->
         <section class="error">
             <div class="col-md-12">
                 <h2 id="name_error"></h2>
             </div>
         </section>
+        <!--Section valide data area-->
         <section class="film-cnt flex-container">
             <article class="flex-row">
                 <div class="flex-col-md-10 no_print">
                     <div class="flex-row">
+
                         <div class="flex-col-md-6">
                             <img id="affiche" src="imgs/noimagefound.jpg" alt="Movie picture">
                         </div>
@@ -116,6 +122,8 @@
                         </div>
                     </div>
                 </div>
+                <!--Aside with print and favorite-->
+
                 <aside class="flex-col-md-2 favorite-list">
                     <button id="favorite" class="btn btn-success no_print"><i class="fa fa-heart" aria-hidden="true"></i> My Favorite</button>
                     <h2 id="titre_list_films">Your movie list</h2>
@@ -128,11 +136,18 @@
             </article>
         </section>
     </div>
+    <!-- waiting image area-->
     <div id="backhide" class="no_print">
         <img src="imgs/movies.jpg" alt="">
     </div>
-    <div id="overlay" class="overlay"><a href="#" class="signin">Sign In</a>
+
+    <!--overlay login area-->
+    <div id="overlay" class="overlay">
+        <!--1st stage-->
+        <a href="#" class="signin">Sign In</a>
+        <div id="skipLogin" class="skipSignout">Continue without sign in</div>
         <span class="intro-txt">Welcome to your movie list manager</span>
+        <!--adding data secong stage-->
         <form class="signinform">
             <div class="signinform-field fadeIn">
                 <label for="name">Enter an user name</label>
@@ -144,6 +159,7 @@
         </form>
     </div>
 </main>
+<!--jquery area-->
 <footer>
    <p>&copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.</p>
 </footer>

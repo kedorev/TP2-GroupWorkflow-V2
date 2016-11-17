@@ -3,6 +3,9 @@ jQuery(document).ready(function(){
         var baseUrl;
         var endUrl;
         e.preventDefault();
+        /**
+         * Getting data from JSon
+         */
         $.getJSON("Json/data.json", function( data )
         {
             baseUrl = data.script.baseUrl;
@@ -65,6 +68,9 @@ function Affichage(data){
         reponse = data.Response;
         setTimeout(hideLoader(reponse), 1500);
     }else {
+        /**
+         * Getting data from JSon
+         */
         $.getJSON("Json/data.json", function( data2 )
         {
             var NA = data2.script.NA;

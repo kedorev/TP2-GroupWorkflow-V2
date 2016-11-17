@@ -546,6 +546,16 @@ footer {
   text-align: center;
   top: 400px; }
 
+.skipSignout {
+  color: #fff;
+  position: relative;
+  top: 420px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.8em;
+  display: block;
+  text-decoration: underline; }
+
 .sign-out {
   display: block;
   margin: 0.5em 0;

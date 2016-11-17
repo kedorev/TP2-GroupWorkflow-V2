@@ -23,7 +23,7 @@ function autocomplete(urlApi) {
         type : 'POST',
         dataType : 'json',
         success : function(code_html){
-
+            console.log("debug");
             listeData(code_html);
         },
         error : function(resultat, statut, erreur){
