@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/animationButton.css">
+    <!-- CSS pour la page d'impression de la liste de films favoris -->
     <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
     <link rel="icon" type="image/png" href="imgs/video-player.png" />
-
     <title>Movie API project</title>
 </head>
 <body>
@@ -23,7 +23,7 @@
     <header class="flex-row no_print">
         <nav class="navbar flex-col-md-8 no_print">
             <div class="logo-wrap">
-                <a href="index.html"><img src="imgs/video-player.png" alt="Logo" class="logo left"></a>
+                <a href="./"><img src="imgs/video-player.png" alt="Logo" class="logo left"></a>
                 <h1 title="Movie" class="left">movie searcher</h1>
             </div>
         </nav>
@@ -41,7 +41,7 @@
     </header>
     <!--search area-->
     <div id="big-input" class="no_print">
-        <form action="submit">
+        <form action="">
             <div class="container">
                 <i class="fa fa-search" aria-hidden="true"></i>
                 <input id="keyword" type="text" placeholder="Search movies by name, actors, genre">
@@ -59,16 +59,14 @@
         </div>
     </div>
     <!--Main area-->
-    <div id="main">
-        <!--Section error area-->
     <div id="main" class="no_print">
+        <!--Section error data area-->
         <section class="error">
             <div class="col-md-12">
                 <h2 id="name_error"></h2>
             </div>
         </section>
         <!--Section valide data area-->
-        <section class="film-cnt flex-container">
         <section class="film-cnt flex-container no_print">
             <article class="flex-row">
                 <div class="flex-col-md-10 no_print">
@@ -131,7 +129,6 @@
                     </div>
                 </div>
                 <!--Aside with print and favorite-->
-
                 <aside class="flex-col-md-2 favorite-list">
                     <button id="favorite" class="btn btn-success no_print">
                         <i class="fa fa-heart" aria-hidden="true"></i>

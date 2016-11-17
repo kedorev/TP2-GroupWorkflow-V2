@@ -17,6 +17,7 @@ body{
 }
 #main{
   display: none;
+  margin-bottom: 50px;
 }
 header{
   position: fixed;
@@ -129,7 +130,7 @@ nav {
 }
 article {
   color: #ffffff;
-  padding-top:25%;
+  padding-top:18%;
   h2{
     margin: 0;
     font-weight: 600;
@@ -319,6 +320,7 @@ footer{
 @media (max-width: $device-xs )  {
   #big-input {
     top:77px;
+    width: 90%;
     input{
       width:65%;
     }
@@ -347,9 +349,6 @@ footer{
     height: 33px;
     font-size: 10px;
     margin-top: -1px;
-  }
-  #big-input{
-    width: 90%;
   }
   footer{
     padding: 0 0;
