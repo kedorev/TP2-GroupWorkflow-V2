@@ -10,5 +10,8 @@
     "Movie"
   ],
   "author": "Angie, Dimitri, Maxime, Yanigg",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^0.5.0"
+  }
 }

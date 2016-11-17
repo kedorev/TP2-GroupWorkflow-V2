@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
 
 
     $( "#login" ).click(function(e) {
-        var person = prompt("Please enter your name", "Your name");
+        var person = $("#user-name").val();
         localStorage.setItem('user',person);
         show_logout()
     });
@@ -27,6 +27,7 @@ jQuery(document).ready(function(){
 
 function show_login()
 {
+    $('#overlay').show();
     $("#logout").hide();
     $("#login").show();
     $("#user_info").hide();
@@ -34,8 +35,34 @@ function show_login()
 
 function show_logout()
 {
-    $("#user").text("Bienvenu(e) "+localStorage.getItem('user'));
+    $("#user").text("Welcome "+localStorage.getItem('user'));
     $("#login").hide();
     $("#logout").show();
     $("#user_info").show();
+    $("#overlay").hide();
 }
+
+
+
+$('.signin').hover(function() {}, function() {
+    $(this).addClass('animateout');
+    setTimeout(function() {
+        $('.signin').removeClass('animateout');
+    }, 750);
+});
+
+$('.signin').on('click', function() {
+    $('.overlay').toggleClass('active');
+    $('signinform-field').removeClass('focus');
+    $('input').val('');
+});
+
+$('input').focus(function() {
+    $(this).parent().addClass('focus');
+});
+
+$('#btSubmit').on('click', function() {
+    var person = $("#user-name").val();
+    localStorage.setItem('user',person);
+    show_logout();
+});

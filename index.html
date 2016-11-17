@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
@@ -12,27 +11,26 @@
     <link rel="stylesheet" href="css/button.css">
     <link rel="stylesheet" href="css/animationButton.css">
     <link rel="stylesheet" type="text/css" href="css/print_favoris.css" media="print" />
-
     <title>Movie API project</title>
 </head>
 <body>
 <main>
     <header class="flex-row">
         <nav class="navbar flex-col-md-8">
-            <div>
-                <img src="imgs/video-player.png" alt="Logo" class="logo left">
+            <div class="logo-wrap">
+                <a href="index.html"><img src="imgs/video-player.png" alt="Logo" class="logo left"></a>
                 <h1 title="Movie" class="left">movie searcher</h1>
             </div>
         </nav>
         <div class="nav_user flex-col-md-4">
             <div id="login">
-                Connexion
+                <button type="submit" class="sign-in2">Sign in</button>
             </div>
             <div id="user_info">
-                <i class="fa fa-user" aria-hidden="true"></i> <span id="user"></span>
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i><span class="user" id="user"></span>
             </div>
-            <div id="logout" >
-                <button><i class="fa fa-times" aria-hidden="true"></i> Déconnexion</button>
+            <div id="logout">
+                <button  type="submit" class="sign-out">Sign out</button>
             </div>
         </div>
     </header>
@@ -40,15 +38,21 @@
         <form action="submit">
             <div class="container">
                 <i class="fa fa-search" aria-hidden="true"></i>
-                <input id="keyword" type="text" placeholder="Rechercher un film ">
+                <input id="keyword" type="text" placeholder="Search movies by name, actors, genre">
                 <button id="search" type="submit" class="btn-search">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
         </form>
     </div>
+    <div class="loader">
+        <div id="loader">
+            <div id="top"></div>
+            <div id="bottom"></div>
+            <div id="line"></div>
+        </div>
+    </div>
     <div id="main">
-        <div class="loader"><img src="imgs/icon-loader.gif" alt=""></div>
         <section class="error">
             <div class="col-md-12">
                 <h2 id="name_error"></h2>
@@ -59,17 +63,17 @@
                 <div class="flex-col-md-10 no_print">
                     <div class="flex-row">
                         <div class="flex-col-md-6">
-                            <img id="affiche" src="" alt="Movie picture">
+                            <img id="affiche" src="imgs/noimagefound.jpg" alt="Movie picture">
                         </div>
                         <div class="flex-col-md-6">
                             <h2 id="name"></h2><span id="released"></span>
                             <div class="flex-row">
                                 <div class="flex-col-md-4">
-                                    <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+                                    <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Runtime : </h3><span id="runtime"></span>
                                 </div>
-                                <div class="flex-col-md-4">
+                                <div class="flex-col-md-6">
                                     <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
-                                        id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                                        id="imdbRating"> </span> / 10 - <span id="imdbVotes"></span> vote(s)
                                 </div>
                             </div>
                             <h3>Synopsis :</h3>
@@ -81,32 +85,32 @@
                                 <span id="genre"></span>
                             </div>
                             <div class="flex-col-md-3 director_show">
-                                <h3>Réalisateur : </h3>
+                                <h3>Director : </h3>
                                 <span id="director"></span>
                             </div>
                             <div class="flex-col-md-4 writer_show">
-                                <h3>Auteur : </h3>
+                                <h3>Writer : </h3>
                                 <span id="writer"></span>
                             </div>
                             <div class="flex-col-md-3 country_show">
-                                <h3>Pays : </h3>
+                                <h3>Country : </h3>
                                 <span id="country"></span>
                             </div>
                             <div class="flex-col-md-10 actors_show">
-                                <h3>Acteurs : </h3>
+                                <h3>Actors : </h3>
                                 <span id="actors"></span>
                             </div>
                             <div class="flex-col-md-3 language_show">
-                                <h3>Langue : </h3>
+                                <h3>Language : </h3>
                                 <span id="language"></span>
                             </div>
-                            <div class="flex-col-md-3 awards_show">
-                                <h3>Récompense : </h3>
+                            <div class="flex-col-md-4 awards_show">
+                                <h3>Awards : </h3>
                                 <span id="awards"></span>
 
                             </div>
                             <div class="flex-col-md-2 metascore_show">
-                                <h3>metascore : </h3>
+                                <h3>Metascore : </h3>
                                 <span id="metascore"></span>
                             </div>
                         </div>
@@ -114,7 +118,7 @@
                 </div>
                 <aside class="flex-col-md-2 favorite-list">
                     <button id="favorite" class="btn btn-success no_print"><i class="fa fa-heart" aria-hidden="true"></i> My Favorite</button>
-                    <h2 id="titre_list_films">Liste de mes films</h2>
+                    <h2 id="titre_list_films">Your movie list</h2>
                     <dl class="favListe">
                         <dt class="favTitle"></dt>
                         <dd class="favYear"></dd>
@@ -127,15 +131,27 @@
     <div id="backhide" class="no_print">
         <img src="imgs/movies.jpg" alt="">
     </div>
+    <div id="overlay" class="overlay"><a href="#" class="signin">Sign In</a>
+        <span class="intro-txt">Welcome to your movie list manager</span>
+        <form class="signinform">
+            <div class="signinform-field fadeIn">
+                <label for="name">Enter an user name</label>
+                <input id="user-name" type="text" />
+            </div>
+            <div class="fadeIn">
+                <button id="btSubmit" type="submit" class="signin-submit">Sign in</button>
+            </div>
+        </form>
+    </div>
 </main>
 <footer>
-    &copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.
-    <script src="bootstrap/js/jquery.min.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/script.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/favorite.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/autocomplete.js"></script> <!-- jQuery est inclus ! -->
-    <script src="js/login.js"></script>
+   <p>&copy; All rights reserved Angeles, Dimitri, Maxime & Yannig.</p>
 </footer>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/favorite.js"></script>
+<script src="js/autocomplete.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
