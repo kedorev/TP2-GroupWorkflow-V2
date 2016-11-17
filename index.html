@@ -27,7 +27,7 @@
                 <button type="submit" class="sign-in2">Sign in</button>
             </div>
             <div id="user_info">
-                <i class="fa fa-user fa-2x" aria-hidden="true"></i><span id="user"></span>
+                <i class="fa fa-user fa-2x" aria-hidden="true"></i><span class="user" id="user"></span>
             </div>
             <div id="logout">
                 <button  type="submit" class="sign-out">Sign out</button>
@@ -38,7 +38,11 @@
         <form action="submit">
             <div class="container">
                 <i class="fa fa-search" aria-hidden="true"></i>
+<<<<<<< HEAD
                 <input id="keyword" type="text" placeholder="Search movies by name, actors, genre">
+=======
+                <input id="keyword" type="text" placeholder="Search your film here ! ">
+>>>>>>> 53a9e5e373c372b9d8e745bab6cac6ff195c30cf
                 <button id="search" type="submit" class="btn-search">
                     <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 </button>
@@ -63,17 +67,17 @@
                 <div class="flex-col-md-10 no_print">
                     <div class="flex-row">
                         <div class="flex-col-md-6">
-                            <img id="affiche" src="" alt="Movie picture">
+                            <img id="affiche" src="imgs/noimagefound.jpg" alt="Movie picture">
                         </div>
                         <div class="flex-col-md-6">
                             <h2 id="name"></h2><span id="released"></span>
                             <div class="flex-row">
                                 <div class="flex-col-md-4">
-                                    <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Durée</h3><span id="runtime"></span>
+                                    <h3><i class="fa fa-clock-o" aria-hidden="true"></i> Runtime : </h3><span id="runtime"></span>
                                 </div>
-                                <div class="flex-col-md-4">
+                                <div class="flex-col-md-6">
                                     <h3><i class="fa fa-star" aria-hidden="true"></i> Evaluation</h3><span class="glyphicon glyphicon-star" aria-hidden="true"> </span><span
-                                        id="imdbRating"> </span> / <span id="imdbVotes"></span> vote(s)
+                                        id="imdbRating"> </span> / 10 - <span id="imdbVotes"></span> vote(s)
                                 </div>
                             </div>
                             <h3>Synopsis :</h3>
@@ -85,32 +89,32 @@
                                 <span id="genre"></span>
                             </div>
                             <div class="flex-col-md-3 director_show">
-                                <h3>Réalisateur : </h3>
+                                <h3>Director : </h3>
                                 <span id="director"></span>
                             </div>
                             <div class="flex-col-md-4 writer_show">
-                                <h3>Auteur : </h3>
+                                <h3>Writer : </h3>
                                 <span id="writer"></span>
                             </div>
                             <div class="flex-col-md-3 country_show">
-                                <h3>Pays : </h3>
+                                <h3>Country : </h3>
                                 <span id="country"></span>
                             </div>
                             <div class="flex-col-md-10 actors_show">
-                                <h3>Acteurs : </h3>
+                                <h3>Actors : </h3>
                                 <span id="actors"></span>
                             </div>
                             <div class="flex-col-md-3 language_show">
-                                <h3>Langue : </h3>
+                                <h3>Language : </h3>
                                 <span id="language"></span>
                             </div>
-                            <div class="flex-col-md-3 awards_show">
-                                <h3>Récompense : </h3>
+                            <div class="flex-col-md-4 awards_show">
+                                <h3>Awards : </h3>
                                 <span id="awards"></span>
 
                             </div>
                             <div class="flex-col-md-2 metascore_show">
-                                <h3>metascore : </h3>
+                                <h3>Metascore : </h3>
                                 <span id="metascore"></span>
                             </div>
                         </div>
@@ -130,6 +134,7 @@
     </div>
     <div id="backhide" class="no_print">
         <img src="imgs/movies.jpg" alt="">
+<<<<<<< HEAD
         <div id="overlay" class="overlay"><a href="#" class="signin">Sign In</a>
             <span class="intro-txt">Welcome to your movie list manager</span>
             <form class="signinform">
@@ -142,6 +147,20 @@
                 </div>
             </form>
         </div>
+=======
+    </div>
+    <div id="overlay" class="overlay"><a href="#" class="signin">Sign In</a>
+        <p>Welcome to your blablabla</p>
+        <form class="signinform">
+            <div class="signinform-field fadeIn">
+                <label for="name">Click here to set your username</label>
+                <input id="user-name" type="text" />
+            </div>
+            <div class="fadeIn">
+                <button id="btSubmit" type="submit" class="signin-submit">Sign in</button>
+            </div>
+        </form>
+>>>>>>> 53a9e5e373c372b9d8e745bab6cac6ff195c30cf
     </div>
 </main>
 <footer>

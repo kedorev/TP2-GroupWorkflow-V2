@@ -51,7 +51,11 @@ nav {
     font-style: italic;
     font-weight: 600;
     text-transform: uppercase;
+<<<<<<< HEAD
     margin-left: 0.6em; }
+=======
+    padding-left: 5px; }
+>>>>>>> 53a9e5e373c372b9d8e745bab6cac6ff195c30cf
 
 #big-input {
   position: fixed;
@@ -150,8 +154,14 @@ footer {
   width: 100%;
   font-weight: 300;
   font-style: italic;
+<<<<<<< HEAD
   position: absolute;
   bottom: 0; }
+=======
+  position: fixed;
+  left: 0px;
+  bottom: 0px; }
+>>>>>>> 53a9e5e373c372b9d8e745bab6cac6ff195c30cf
 
 .loader {
   display: none;
