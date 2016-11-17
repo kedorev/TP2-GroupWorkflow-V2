@@ -50,7 +50,8 @@ nav {
     font-size: 1.1em;
     font-style: italic;
     font-weight: 600;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-left: 5px; }
 
 #big-input {
   position: fixed;
@@ -138,7 +139,10 @@ footer {
   padding: 10px 0;
   width: 100%;
   font-weight: 300;
-  font-style: italic; }
+  font-style: italic;
+  position: fixed;
+  left: 0px;
+  bottom: 0px; }
 
 .loader {
   display: none;

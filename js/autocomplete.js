@@ -60,5 +60,12 @@ var liste = [
     ""
 ];
 $('#keyword').autocomplete({
-    source : liste
+    source : liste,
+
+    select : function(event, ui)
+    { // lors de la sélection d'une proposition
+
+        alert(ui.item.text);
+
+    }
 });
